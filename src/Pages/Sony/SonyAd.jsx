@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-
-const SamsungAd = () => {
+const SonyAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/samsungad")
+    fetch("http://localhost:5000/sonyad")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);
@@ -36,5 +35,4 @@ const SamsungAd = () => {
   );
 };
 
-
-export default SamsungAd;
+export default SonyAd;

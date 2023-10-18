@@ -5,7 +5,9 @@ import SamsungProducts from "./samsungProducts";
 const Samsung = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      <div className="pb-28 lg:pb-0">
+        <Navbar></Navbar>
+      </div>
       <div>
         <SamsungAd></SamsungAd>
         <SamsungProducts></SamsungProducts>

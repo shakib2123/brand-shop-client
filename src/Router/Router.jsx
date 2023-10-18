@@ -9,6 +9,8 @@ import Cart from "../Pages/Cart/Cart";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import ProductUpdate from "../Pages/ProductUpdate/ProductUpdate";
 import Apple from "../Pages/Apple/Apple";
+import Sony from "../Pages/Sony/Sony";
+import Google from "../Pages/Google/Google";
 
 const Router = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const Router = createBrowserRouter([
       {
         path: "/Apple",
         element: <Apple></Apple>,
+      },
+      {
+        path: "/Sony",
+        element: <Sony></Sony>,
+      },
+      {
+        path: "/Google",
+        element: <Google></Google>,
       },
     ],
   },

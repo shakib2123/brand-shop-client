@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
 const AppleAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
@@ -11,23 +12,26 @@ const AppleAd = () => {
       .then((data) => setImages(data));
   }, []);
 
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-  };
   return (
     <div className="max-w-7xl mx-auto">
-      <Slider {...settings}>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        loop={true}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
         {images.map((image) => (
-          <div key={image._id}>
-            <img className="h-[60vh] w-full" src={image.photo} alt="" />
-          </div>
+          <SwiperSlide key={image._id}>
+            <div>
+              <img className="h-[60vh] w-full" src={image.photo} alt="" />
+            </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 };

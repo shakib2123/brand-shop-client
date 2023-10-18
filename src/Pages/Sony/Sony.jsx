@@ -1,20 +1,19 @@
 import Navbar from "../../components/Navbar/Navbar";
-import AppleAd from "./AppleAd";
+import SonyAd from "./SonyAd";
+import SonyProducts from "./SonyProducts";
 
-import AppleProducts from "./AppleProducts";
-
-const Apple = () => {
+const Sony = () => {
   return (
     <div>
       <div className="pb-28 lg:pb-0">
         <Navbar></Navbar>
       </div>
       <div>
-        <AppleAd></AppleAd>
-        <AppleProducts></AppleProducts>
+        <SonyAd></SonyAd>
+        <SonyProducts></SonyProducts>
       </div>
     </div>
   );
 };
 
-export default Apple;
+export default Sony;
