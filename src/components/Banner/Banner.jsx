@@ -18,7 +18,7 @@ const Banner = () => {
             your life smarter, easier, and more enjoyable. Embrace innovation
             today.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary">Shop Now</button>
         </div>
       </div>
     </div>
