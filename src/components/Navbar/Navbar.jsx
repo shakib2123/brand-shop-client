@@ -8,6 +8,9 @@ const navLink = (
     <li>
       <NavLink to="/addproduct">Add Product</NavLink>
     </li>
+    <li>
+      <NavLink to="/mycart">My Cart</NavLink>
+    </li>
   </>
 );
 const Navbar = () => {

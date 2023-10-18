@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 const AddProduct = () => {
@@ -112,6 +113,7 @@ const AddProduct = () => {
           </div>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
