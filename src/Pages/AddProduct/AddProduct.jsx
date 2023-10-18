@@ -5,18 +5,36 @@ const AddProduct = () => {
   const handleAdd = (e) => {
     e.preventDefault();
     const form = e.target;
+    const brand = form.brand.value;
     const name = form.name.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const description = form.description.value;
     const photo = form.photo.value;
-    const brand = { name, photo };
-    fetch("http://localhost:5000/brands", {
+
+    const product = {
+      brand,
+      name,
+      type,
+      price,
+      rating,
+      description,
+      photo,
+    };
+
+    fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(brand),
+      body: JSON.stringify(product),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+      });
+    form.reset();
   };
   return (
     <div>
@@ -31,9 +49,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
-                name="name"
+                name="brand"
                 placeholder="Brand Name"
                 className="input input-bordered w-full"
+                required
               />
             </div>
             <div className="form-control md:w-1/2">
@@ -42,9 +61,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
-                name="photo"
+                name="name"
                 placeholder="Product Name"
                 className="input input-bordered w-full"
+                required
               />
             </div>
           </div>
@@ -56,8 +76,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
+                name="type"
                 placeholder="Product Type"
                 className="input input-bordered w-full"
+                required
               />
             </div>
             <div className="form-control md:w-1/2">
@@ -66,8 +88,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
+                name="price"
                 placeholder="Price"
                 className="input input-bordered w-full"
+                required
               />
             </div>
           </div>
@@ -79,8 +103,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
+                name="rating"
                 placeholder="Rating"
                 className="input input-bordered w-full"
+                required
               />
             </div>
             <div className="form-control md:w-1/2">
@@ -89,8 +115,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
+                name="description"
                 placeholder="Product Name"
                 className="input input-bordered w-full"
+                required
               />
             </div>
           </div>
@@ -102,8 +130,10 @@ const AddProduct = () => {
               </label>
               <input
                 type="text"
+                name="photo"
                 placeholder="Brand Name"
                 className="input input-bordered w-full"
+                required
               />
             </div>
           </div>

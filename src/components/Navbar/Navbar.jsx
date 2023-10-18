@@ -74,7 +74,9 @@ const Navbar = () => {
           </ul>
         </div> */}
         <Link to="/login">
-          <button>Sign In</button>
+          <button className="btn btn-sm bg-pink-600 hover:bg-pink-500 text-white">
+            Sign In
+          </button>
         </Link>
       </div>
     </div>

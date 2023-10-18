@@ -16,12 +16,12 @@ const Brands = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {brands.map((brand) => (
           <Link to={brand.name} key={brand._id}>
-            <div className="card card-compact bg-base-100 shadow-xl">
-              <figure className="w-full h-56">
-                <img className="h-full w-full" src={brand.photo} alt="Shoes" />
+            <div className="card h-56 bg-base-100 shadow-xl image-full">
+              <figure className="h-56 w-full">
+                <img className="w-full h-full" src={brand.photo} alt="Shoes" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title text-3xl">{brand.name}</h2>
+                <h2 className="card-title">{brand.name}</h2>
               </div>
             </div>
           </Link>
