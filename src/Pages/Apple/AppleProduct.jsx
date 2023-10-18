@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const SamsungProduct = ({ product }) => {
+const AppleProduct = ({ product }) => {
   const { _id, brand, name, type, price, rating, description, photo } = product;
 
   return (
@@ -28,4 +28,4 @@ const SamsungProduct = ({ product }) => {
   );
 };
 
-export default SamsungProduct;
+export default AppleProduct;

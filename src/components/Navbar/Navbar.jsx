@@ -9,7 +9,7 @@ const navLink = (
       <NavLink to="/addproduct">Add Product</NavLink>
     </li>
     <li>
-      <NavLink to="/mycart">My Cart</NavLink>
+      <NavLink to="/cart">My Cart</NavLink>
     </li>
   </>
 );

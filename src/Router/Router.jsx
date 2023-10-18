@@ -5,6 +5,10 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Samsung from "../Pages/Samsung/Samsung";
 import Login from "../Pages/Login/Login";
+import Cart from "../Pages/Cart/Cart";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import ProductUpdate from "../Pages/ProductUpdate/ProductUpdate";
+import Apple from "../Pages/Apple/Apple";
 
 const Router = createBrowserRouter([
   {
@@ -28,6 +32,27 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>,
+        loader: () => fetch("http://localhost:5000/cart"),
+      },
+      {
+        path: "/detail/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
+        element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path: "/update/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
+        element: <ProductUpdate></ProductUpdate>,
+      },
+      {
+        path: "/Apple",
+        element: <Apple></Apple>,
       },
     ],
   },
