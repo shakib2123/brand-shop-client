@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Samsung from "../Pages/Samsung/Samsung";
+import Login from "../Pages/Login/Login";
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const Router = createBrowserRouter([
       {
         path: "/Samsung",
         element: <Samsung></Samsung>,
+      },
+
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },

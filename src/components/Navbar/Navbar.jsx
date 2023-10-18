@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navLink = (
   <>
@@ -49,7 +49,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLink}</ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
+        {/* <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -69,7 +69,10 @@ const Navbar = () => {
               <a>Logout</a>
             </li>
           </ul>
-        </div>
+        </div> */}
+        <Link to="/login">
+          <button>Sign In</button>
+        </Link>
       </div>
     </div>
   );
