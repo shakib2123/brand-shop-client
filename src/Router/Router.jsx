@@ -13,6 +13,7 @@ import Sony from "../Pages/Sony/Sony";
 import Google from "../Pages/Google/Google";
 import Intel from "../Pages/Intel/Intel";
 import Asus from "../Pages/Asus/Asus";
+import Register from "../Pages/Register/Register";
 
 const Router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/cart",

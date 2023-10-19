@@ -1,32 +1,52 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import Swal from "sweetalert2";
-import Navbar from "../../components/Navbar/Navbar";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const Login = () => {
-  const { logIn, googleLogin } = useContext(AuthContext);
-  const location = useLocation();
+import toast, { Toaster } from "react-hot-toast";
+import Navbar from "../../components/Navbar/Navbar";
+import Swal from "sweetalert2";
+
+const Register = () => {
+  const { createUser, profileUpdate, googleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
-  const handleLogIn = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    logIn(email, password)
-      .then((res) => {
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{8,}$/.test(
+        password
+      )
+    ) {
+      return toast.error(
+        "Password should be at least 6 latter and special character."
+      );
+    }
+    createUser(email, password)
+      .then((result) => {
+        profileUpdate(name, photo)
+          .then((result) => console.log(result))
+          .catch((err) => console.log(err));
+        e.target.reset();
         Swal.fire("Success!!", "Sign up successfully!", "success");
-        navigate(location.state ? location.state : "/");
+        navigate("/");
       })
-      .catch((err) => toast.error(err.message));
+      .catch((error) => {
+        Swal.fire("Error!!", error.message, "error");
+      });
   };
   const socialLogin = (media) => {
     media()
       .then((res) => {
-        navigate(location.state ? location.state : "/");
+        navigate("/");
         Swal.fire("Success!!", "Sign up successfully!", "success");
       })
-      .catch((err) => toast.error(err.message));
+      .catch((err) => {
+        Swal.fire("Error!!", err.message, "error");
+      });
   };
   return (
     <div>
@@ -36,10 +56,34 @@ const Login = () => {
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold">Register now!</h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogIn} className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  name="photo"
+                  placeholder="photo URL"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -70,19 +114,19 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Register</button>
                 <button
                   onClick={() => socialLogin(googleLogin)}
                   className="btn btn-secondary mt-2"
                 >
                   Google
                 </button>
-               
+              
               </div>
               <p>
-                Have no account please
-                <Link to="/register" className="underline ml-2">
-                  Register
+                Already have an please
+                <Link to="/login" className="underline ml-2">
+                  Login
                 </Link>
               </p>
             </form>
@@ -94,4 +138,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

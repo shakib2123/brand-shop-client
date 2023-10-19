@@ -5,7 +5,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import Technology from "../../components/Technology/Technology";
 import Update from "../../components/Update/Update";
 
-const Home = () => {
+const Home = () =>
+{
+  
   return (
     <div>
       <Navbar />
