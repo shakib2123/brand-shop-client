@@ -11,6 +11,8 @@ import ProductUpdate from "../Pages/ProductUpdate/ProductUpdate";
 import Apple from "../Pages/Apple/Apple";
 import Sony from "../Pages/Sony/Sony";
 import Google from "../Pages/Google/Google";
+import Intel from "../Pages/Intel/Intel";
+import Asus from "../Pages/Asus/Asus";
 
 const Router = createBrowserRouter([
   {
@@ -63,6 +65,14 @@ const Router = createBrowserRouter([
       {
         path: "/Google",
         element: <Google></Google>,
+      },
+      {
+        path: "/Intel",
+        element: <Intel></Intel>,
+      },
+      {
+        path: "/Asus",
+        element: <Asus></Asus>,
       },
     ],
   },
