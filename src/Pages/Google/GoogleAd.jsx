@@ -6,7 +6,7 @@ import "swiper/css";
 const GoogleAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/googlead")
+    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/googlead")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);
@@ -34,6 +34,5 @@ const GoogleAd = () => {
     </div>
   );
 };
-
 
 export default GoogleAd;

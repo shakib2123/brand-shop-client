@@ -6,9 +6,9 @@ import AppleProducts from "./AppleProducts";
 const Apple = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+
         <Navbar></Navbar>
-      </div>
+      
       <div>
         <AppleAd></AppleAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

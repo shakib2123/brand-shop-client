@@ -7,7 +7,7 @@ import "swiper/css";
 const AppleAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/applead")
+    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/applead")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

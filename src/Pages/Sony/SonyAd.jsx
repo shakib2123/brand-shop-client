@@ -6,7 +6,7 @@ import "swiper/css";
 const SonyAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/sonyad")
+    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/sonyad")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="bg-base-300  py-8">
-      <h2 className="text-center text-4xl font-semibold text-gray-800">
+    <div className="bg-base-300 text-base-content  py-8">
+      <h2 className="text-center text-4xl font-semibold">
         Global Tech LTD.
       </h2>
       <footer className="max-w-7xl mx-auto footer p-10 text-base-content">

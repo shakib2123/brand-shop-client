@@ -4,7 +4,9 @@ import AppleProduct from "./AppleProduct";
 const AppleProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/apple")
+    fetch(
+      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/apple"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

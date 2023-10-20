@@ -5,7 +5,9 @@ import GoogleProduct from "./GoogleProduct";
 const GoogleProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/google")
+    fetch(
+      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/google"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -13,7 +15,7 @@ const GoogleProducts = () => {
     <div className="max-w-7xl mx-auto my-8">
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
-         <GoogleProduct key={product._id} product={product}></GoogleProduct>
+          <GoogleProduct key={product._id} product={product}></GoogleProduct>
         ))}
       </div>
     </div>

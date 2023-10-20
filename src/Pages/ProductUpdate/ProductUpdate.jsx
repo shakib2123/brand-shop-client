@@ -25,13 +25,16 @@ const ProductUpdate = () => {
       photo,
     };
 
-    fetch(`http://localhost:5000/products/${loadedProduct._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${loadedProduct._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -39,7 +42,7 @@ const ProductUpdate = () => {
           Swal.fire("Success", "Product updated successfully.", "success");
         }
       });
-    form.reset();
+  
   };
   return (
     <div>

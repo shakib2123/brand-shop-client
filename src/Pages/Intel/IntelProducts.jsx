@@ -4,7 +4,9 @@ import IntelProduct from "./IntelProduct";
 const IntelProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/intel")
+    fetch(
+      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/intel"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

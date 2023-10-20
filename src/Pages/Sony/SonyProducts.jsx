@@ -4,7 +4,9 @@ import SonyProduct from "./SonyProduct";
 const SonyProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/sony")
+    fetch(
+      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/sony"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

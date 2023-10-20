@@ -6,7 +6,7 @@ import "swiper/css";
 const AsusAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/asusad")
+    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/asusad")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

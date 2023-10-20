@@ -5,9 +5,9 @@ import IntelProducts from "./IntelProducts";
 const Intel = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+    
         <Navbar></Navbar>
-      </div>
+ 
       <div>
         <IntelAd></IntelAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

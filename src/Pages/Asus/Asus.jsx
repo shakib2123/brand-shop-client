@@ -5,9 +5,9 @@ import AsusProducts from "./AsusProducts";
 const Asus = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+    
         <Navbar></Navbar>
-      </div>
+    
       <div>
         <AsusAd></AsusAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

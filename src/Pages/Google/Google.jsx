@@ -5,9 +5,9 @@ import GoogleProducts from "./GoogleProducts";
 const Google = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+      
         <Navbar></Navbar>
-      </div>
+
       <div>
         <GoogleAd></GoogleAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

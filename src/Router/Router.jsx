@@ -14,6 +14,7 @@ import Google from "../Pages/Google/Google";
 import Intel from "../Pages/Intel/Intel";
 import Asus from "../Pages/Asus/Asus";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/addproduct",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/Samsung",
@@ -44,20 +49,39 @@ const Router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart></Cart>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        element: (
+          <PrivateRoute>
+            <Cart></Cart>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/cart"
+          ),
       },
       {
         path: "/detail/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
-        element: <ProductDetails></ProductDetails>,
+          fetch(
+            `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${params.id}`
+          ),
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
-        element: <ProductUpdate></ProductUpdate>,
+          fetch(
+            `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${params.id}`
+          ),
+        element: (
+          <PrivateRoute>
+            <ProductUpdate></ProductUpdate>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/Apple",

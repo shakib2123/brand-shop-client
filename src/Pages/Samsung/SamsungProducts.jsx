@@ -4,7 +4,9 @@ import SamsungProduct from "./samsungProduct";
 const SamsungProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/samsung")
+    fetch(
+      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/samsung"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

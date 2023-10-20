@@ -5,9 +5,9 @@ import SamsungProducts from "./samsungProducts";
 const Samsung = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+     
         <Navbar></Navbar>
-      </div>
+ 
       <div>
         <SamsungAd></SamsungAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

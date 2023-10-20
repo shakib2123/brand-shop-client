@@ -6,7 +6,7 @@ import "swiper/css";
 const IntelAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/intelad")
+    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/intelad")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

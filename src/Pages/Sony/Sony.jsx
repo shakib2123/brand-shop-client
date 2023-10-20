@@ -5,9 +5,9 @@ import SonyProducts from "./SonyProducts";
 const Sony = () => {
   return (
     <div>
-      <div className="pb-28 lg:pb-0">
+
         <Navbar></Navbar>
-      </div>
+
       <div>
         <SonyAd></SonyAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">
