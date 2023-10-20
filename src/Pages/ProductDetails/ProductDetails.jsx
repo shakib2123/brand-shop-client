@@ -2,10 +2,15 @@ import { useLoaderData } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Swal from "sweetalert2";
 import Rating from "react-rating";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const ProductDetails = () => {
+  const { user } = useContext(AuthContext);
+
   const product = useLoaderData();
   const cart = {
+    email: user.email,
     brand: product.brand,
     name: product.name,
     type: product.type,
@@ -14,6 +19,7 @@ const ProductDetails = () => {
     description: product.description,
     photo: product.photo,
   };
+
   const handleAdd = () => {
     fetch("https://brand-shop-server-1dl42k7ye-shakib2123.vercel.app/cart", {
       method: "POST",

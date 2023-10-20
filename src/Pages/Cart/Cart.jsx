@@ -1,16 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartProduct from "./CartProduct";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Cart = () => {
+  const { user } = useContext(AuthContext);
   const loadedProduct = useLoaderData();
   const [products, setProducts] = useState(loadedProduct);
   const [isShow, setIsShow] = useState(false);
+  useEffect(() => {
+    const findData = loadedProduct.filter((data) => data.email === user.email);
+    setProducts(findData);
+  }, [loadedProduct, user.email]);
   return (
     <div>
       <Navbar></Navbar>
-      {products.length >0 ? (
+      {products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto my-16">
           {isShow
             ? products?.map((product) => (
