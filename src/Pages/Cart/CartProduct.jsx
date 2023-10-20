@@ -15,7 +15,7 @@ const CartProduct = ({ product, products, setProducts }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://brand-shop-server-o37r0r355-shakib2123.vercel.app/cart/${id}`,
+          `https://brand-shop-server-1dl42k7ye-shakib2123.vercel.app/cart/${id}`,
           {
             method: "DELETE",
           }

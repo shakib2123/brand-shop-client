@@ -5,7 +5,7 @@ const AppleProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch(
-      "https://brand-shop-server-o37r0r355-shakib2123.vercel.app/products/apple"
+      "https://brand-shop-server-1dl42k7ye-shakib2123.vercel.app/products/apple"
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));

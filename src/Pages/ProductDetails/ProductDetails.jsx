@@ -15,7 +15,7 @@ const ProductDetails = () => {
     photo: product.photo,
   };
   const handleAdd = () => {
-    fetch("https://brand-shop-server-o37r0r355-shakib2123.vercel.app/cart", {
+    fetch("https://brand-shop-server-1dl42k7ye-shakib2123.vercel.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
