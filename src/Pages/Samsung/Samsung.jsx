@@ -1,13 +1,11 @@
 import Navbar from "../../components/Navbar/Navbar";
 import SamsungAd from "./SamsungAd";
-import SamsungProducts from "./samsungProducts";
+import SamsungProducts from "./SamsungProducts"
 
 const Samsung = () => {
   return (
     <div>
-     
-        <Navbar></Navbar>
- 
+      <Navbar></Navbar>
       <div>
         <SamsungAd></SamsungAd>
         <div className="alert alert-info max-w-7xl mx-auto mt-4">

@@ -26,7 +26,7 @@ const ProductUpdate = () => {
     };
 
     fetch(
-      `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${loadedProduct._id}`,
+      `https://brand-shop-server-o37r0r355-shakib2123.vercel.app/products/${loadedProduct._id}`,
       {
         method: "PUT",
         headers: {
@@ -42,7 +42,6 @@ const ProductUpdate = () => {
           Swal.fire("Success", "Product updated successfully.", "success");
         }
       });
-  
   };
   return (
     <div>

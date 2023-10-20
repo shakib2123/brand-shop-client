@@ -7,7 +7,7 @@ import "swiper/css";
 const SamsungAd = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/samsungad")
+    fetch("https://brand-shop-server-o37r0r355-shakib2123.vercel.app/samsungad")
       .then((res) => res.json())
       .then((data) => setImages(data));
   }, []);

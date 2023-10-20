@@ -56,14 +56,14 @@ const Router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/cart"
+            "https://brand-shop-server-o37r0r355-shakib2123.vercel.app/cart"
           ),
       },
       {
         path: "/detail/:id",
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${params.id}`
+            `https://brand-shop-server-o37r0r355-shakib2123.vercel.app/products/${params.id}`
           ),
         element: (
           <PrivateRoute>
@@ -75,7 +75,7 @@ const Router = createBrowserRouter([
         path: "/update/:id",
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/${params.id}`
+            `https://brand-shop-server-o37r0r355-shakib2123.vercel.app/products/${params.id}`
           ),
         element: (
           <PrivateRoute>

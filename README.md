@@ -1,8 +1,28 @@
-# React + Vite
+# Website Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official website of [GLOBAL TECH].
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can also access the live site
+[here](https://brand-shop-ca1d3.web.app/).
+
+## Features
+
+Here are five key features that make my website stand out:
+
+- **User Registration and Authentication:** My Awesome Website offers user
+  registration and authentication. Users can sign up for an account, securely
+  log in, and personalize their experience on the platform.
+
+- **Toggle Between Light And Dark Theme:** User easily toggle between light and dark theme if need it make the website more user friendly.
+
+- **Private Route:** User can not access every route without login , this is
+  make website more security.
+
+- **Detail Route:** User also see the product or services details and also buy .
+  It can make the site more interactive and useful.
+
+- **Responsive Design:** My Website is designed to be responsive, ensuring that
+  it looks and works great on a variety of devices, including desktops, tablets,
+  and smartphones.

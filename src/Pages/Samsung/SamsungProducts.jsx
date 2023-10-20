@@ -5,7 +5,7 @@ const SamsungProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch(
-      "https://brand-shop-server-ca8glg8nh-shakib2123.vercel.app/products/samsung"
+      "https://brand-shop-server-o37r0r355-shakib2123.vercel.app/products/samsung"
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
